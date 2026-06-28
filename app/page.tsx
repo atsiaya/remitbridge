@@ -4,9 +4,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 // ─── ICONS ───────────────────────────────────────────────────────────────────
-const Ico = ({ d, size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+type IcoProps = {
+  d: string;
+  size?: number;
+};
+
+const Ico = ({ d, size = 18 }: IcoProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.8}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d={d} />
   </svg>
 );
@@ -20,10 +33,24 @@ const IcoLock     = () => <Ico d="M19 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 
 const IcoClock    = () => <Ico d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 6v6l4 2" />;
 const IcoUsers    = () => <Ico d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 14v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />;
 const IcoBriefcase = () => <Ico d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />;
-const IcoChevron  = ({ open }) => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-    style={{ transition: "transform .25s", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}>
+type IcoChevronProps = {
+  open: boolean;
+};
+
+const IcoChevron = ({ open }: IcoChevronProps) => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    style={{
+      transition: "transform .25s",
+      transform: open ? "rotate(180deg)" : "rotate(0deg)",
+    }}
+  >
     <path d="M6 9l6 6 6-6" />
   </svg>
 );
@@ -104,17 +131,29 @@ function NetworkMap() {
         )}
         {/* edges */}
         {edges.map(([a, b], i) => {
-          const na = nodes.find(n => n.id === a);
-          const nb = nodes.find(n => n.id === b);
+          const na = nodes[i];
+          const nb = nodes[i + 1];
+
+          if (!na || !nb) return null;
+
           const isActive = i === active;
+
           return (
             <g key={i}>
-              <line x1={na.x} y1={na.y} x2={nb.x} y2={nb.y}
+              <line
+                x1={na.x}
+                y1={na.y}
+                x2={nb.x}
+                y2={nb.y}
                 stroke={isActive ? "#1D4ED8" : "#BFDBFE"}
                 strokeWidth={isActive ? 1.8 : 1}
               />
+
               {isActive && (
-                <motion.circle r="5" fill="#1D4ED8" filter="url(#blueGlow)"
+                <motion.circle
+                  r="5"
+                  fill="#1D4ED8"
+                  filter="url(#blueGlow)"
                   initial={{ cx: na.x, cy: na.y }}
                   animate={{ cx: nb.x, cy: nb.y }}
                   transition={{ duration: 1.2, ease: "easeInOut" }}
@@ -152,28 +191,70 @@ function NetworkMap() {
 }
 
 // ─── COUNTER ─────────────────────────────────────────────────────────────────
-function Counter({ target, suffix = "", prefix = "" }) {
+type CounterProps = {
+  target: number;
+  suffix?: string;
+  prefix?: string;
+};
+
+function Counter({
+  target,
+  suffix = "",
+  prefix = "",
+}: CounterProps) {
   const [val, setVal] = useState(0);
-  const ref = useRef(null);
+  const ref = useRef<HTMLSpanElement | null>(null);
   const [on, setOn] = useState(false);
+
   useEffect(() => {
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting && !on) { setOn(true); obs.disconnect(); } }, { threshold: 0.5 });
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting && !on) {
+          setOn(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
     if (ref.current) obs.observe(ref.current);
+
     return () => obs.disconnect();
   }, [on]);
+
   useEffect(() => {
     if (!on) return;
-    let s = 0; const step = target / 55;
-    const t = setInterval(() => { s += step; if (s >= target) { setVal(target); clearInterval(t); } else setVal(Math.floor(s)); }, 16);
+
+    let s = 0;
+    const step = target / 55;
+
+    const t = setInterval(() => {
+      s += step;
+
+      if (s >= target) {
+        setVal(target);
+        clearInterval(t);
+      } else {
+        setVal(Math.floor(s));
+      }
+    }, 16);
+
     return () => clearInterval(t);
   }, [on, target]);
-  return <span ref={ref}>{prefix}{val.toLocaleString()}{suffix}</span>;
+
+  return (
+    <span ref={ref}>
+      {prefix}
+      {val.toLocaleString()}
+      {suffix}
+    </span>
+  );
 }
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 export default function RemitBridge() {
   const [tab, setTab] = useState("send");
-  const [faq, setFaq] = useState(null);
+  const [faq, setFaq] = useState<number | null>(null);
 
   const features = [
     { icon: <IcoGlobe />,     title: "190+ Countries",           desc: "Direct local rails in every major market. No correspondent chains, no opaque routing fees — just clean, traceable transfers." },
@@ -695,20 +776,31 @@ export default function RemitBridge() {
           <div className="faq-list">
             {faqs.map((f, i) => (
               <div key={i} className="faq-item">
-                <div className="faq-q" onClick={() => setFaq(faq === i ? null : i)}>
-                  <span className="faq-q-text">{f.q}</span>
-                  <span className="faq-chevron"><IcoChevron open={faq === i} /></span>
-                </div>
-                <AnimatePresence>
-                  {faq === i && (
-                    <motion.div className="faq-a"
-                      initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }} transition={{ duration: .22 }}>
-                      {f.a}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+              <div
+                className="faq-q"
+                onClick={() => setFaq(faq === i ? null : i)}
+              >
+                <span className="faq-q-text">{f.q}</span>
+
+                <span className="faq-chevron">
+                  <IcoChevron open={faq === i} />
+                </span>
               </div>
+
+              <AnimatePresence>
+                {faq === i && (
+                  <motion.div
+                    className="faq-a"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.22 }}
+                  >
+                    {f.a}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             ))}
           </div>
         </div>
