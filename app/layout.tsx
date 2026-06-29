@@ -91,7 +91,7 @@ export default function RootLayout({
             </nav>
 
             <div className="rb-nav__right">
-              <a href="/login" className="rb-nav__signin">
+              <a href="/download-app" className="rb-nav__signin">
                 Sign in
               </a>
               <a href="/register" className="rb-nav__cta">
