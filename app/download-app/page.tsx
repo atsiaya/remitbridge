@@ -165,7 +165,7 @@ export default function DownloadAppPage() {
                     <div className="dl-apk-row__label">Direct APK download</div>
                     <div className="dl-apk-row__desc">For Android sideloading</div>
                   </div>
-                  <a href="/debug-apk/app-release.apk" className="dl-apk-btn">
+                  <a href="https://drive.google.com/file/d/1MbTjPMFlwnPbR6MbKWw8x_PFgDlydnuI/view?usp=sharing" className="dl-apk-btn">
                     Download
                   </a>
                 </div>
