@@ -256,7 +256,7 @@ const TICKER_PAIRS = [
 
 const NAV_LINKS = [
   { label: "Product",    href: "/products"    },
-  { label: "Pricing",    href: "/solutions"    },
+  { label: "Solutions",    href: "/solutions"    },
   { label: "Developers", href: "/developers" },
   { label: "About",      href: "/company"      },
   { label: "Blog",       href: "/blog"       },
