@@ -119,8 +119,8 @@ const faqs = [
 
 // ─── MOCK CREDENTIALS STATE ───────────────────────────────────────────────────
 const initialKeys = [
-  { id: "key_1", label: "Sandbox — Default",   env: "sandbox",    publicKey: "pk_sandbox_4f9a2c8e1b3d", secretKey: "sk_sandbox_7d3e9f1a2b4c6e8a0d2f4b6c8e1a3d5f", created: "Jun 12, 2026", lastUsed: "2 hours ago" },
-  { id: "key_2", label: "Production — Server", env: "production", publicKey: "pk_live_9b2e7a4c1f6d",    secretKey: "sk_live_1a3c5e7f9b1d3f5a7c9e1b3d5f7a9c1e", created: "May 28, 2026", lastUsed: "14 minutes ago" },
+  { id: "key_1", label: "Sandbox — Default",   env: "sandbox",    publicKey: "pk_sandbox_4f9a2c8e1b3d", secretKey: "*****", created: "Jun 12, 2026", lastUsed: "2 hours ago" },
+  { id: "key_2", label: "Production — Server", env: "production", publicKey: "pk_live_9b2e7a4c1f6d",    secretKey: "*****", created: "May 28, 2026", lastUsed: "14 minutes ago" },
 ];
 
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
