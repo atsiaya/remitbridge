@@ -218,7 +218,7 @@ export default function DevelopersPage() {
               </h1>
               <p className="dv-sub">
                 One REST API for transfers, FX, multi-currency wallets, cards,
-                and payouts across 190+ countries. Sandbox access in minutes —
+                and payouts across 50+ countries. Sandbox access in minutes —
                 production-ready when you are.
               </p>
               <div className="dv-hero__actions">
@@ -237,7 +237,7 @@ export default function DevelopersPage() {
             {[
               { val: "99.98%", label: "API uptime SLA" },
               { val: "< 80ms", label: "P50 response time" },
-              { val: "190+",   label: "Countries supported" },
+              { val: "50+",   label: "Countries supported" },
               { val: "4",      label: "Official SDKs" },
             ].map((s, i) => (
               <div key={i} className="dv-stat">

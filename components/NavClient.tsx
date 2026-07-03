@@ -25,10 +25,10 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 const SOLUTIONS_LINKS: SolutionLink[] = [
-  { title: "Money transfers",   desc: "Send internationally to 190+ countries",             href: "/solutions/money-transfers"   },
+  { title: "Money transfers",   desc: "Send internationally to 50+ countries",             href: "/solutions/money-transfers"   },
   { title: "Currency exchange", desc: "Convert between 65 currencies at mid-market rates",  href: "/solutions/currency-exchange" },
   { title: "Mobile top-ups",    desc: "Recharge airtime and data plans overseas",            href: "/solutions/mobile-topups"     },
-  { title: "Global eSIM",       desc: "Stay connected in 190+ countries instantly",         href: "/solutions/esim"              },
+  { title: "Global eSIM",       desc: "Stay connected in 50+ countries instantly",         href: "/solutions/esim"              },
 ];
 
 // ─── ICONS ───────────────────────────────────────────────────────────────────
@@ -162,8 +162,8 @@ export default function NavClient() {
 
           {/* Desktop CTAs */}
           <div className="nav__actions">
-            <Link href="/login"    className="nav__signin">Sign in</Link>
-            <Link href="/register" className="nav__cta">Open account →</Link>
+            <Link href="/"    className="nav__signin">Sign in</Link>
+            <Link href="/download-app" className="nav__cta">Get the app →</Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -260,11 +260,11 @@ export default function NavClient() {
 
           {/* Drawer CTAs */}
           <div className="nav-drawer__actions">
-            <Link href="/login"    className="nav-drawer__btn nav-drawer__btn--outline" onClick={closeMobile}>
+            <Link href="/"    className="nav-drawer__btn nav-drawer__btn--outline" onClick={closeMobile}>
               Sign in
             </Link>
-            <Link href="/register" className="nav-drawer__btn nav-drawer__btn--solid"   onClick={closeMobile}>
-              Open account →
+            <Link href="/download-app" className="nav-drawer__btn nav-drawer__btn--solid"   onClick={closeMobile}>
+              Get the app →
             </Link>
           </div>
         </div>
@@ -285,7 +285,7 @@ const NAV_STYLES = `
   }
   .nav__inner {
     height: 64px; display: flex; align-items: center;
-    justify-content: space-between; gap: 24px;
+    justify-content: space-between; gap: 124px;
   }
 
   /* Logo */

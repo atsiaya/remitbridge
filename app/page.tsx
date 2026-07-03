@@ -257,7 +257,7 @@ export default function RemitBridge() {
   const [faq, setFaq] = useState<number | null>(null);
 
   const features = [
-    { icon: <IcoGlobe />,     title: "190+ Countries",           desc: "Direct local rails in every major market. No correspondent chains, no opaque routing fees — just clean, traceable transfers." },
+    { icon: <IcoGlobe />,     title: "50+ Countries",           desc: "Direct local rails in every major market. No correspondent chains, no opaque routing fees — just clean, traceable transfers." },
     { icon: <IcoZap />,       title: "Sub-3s Settlement",        desc: "On supported corridors, payments confirm in under three seconds. Real-time credit notifications to sender and recipient." },
     { icon: <IcoShield />,    title: "Segregated Client Funds",  desc: "Your money never commingles with ours. Held in ring-fenced accounts at tier-1 custodian banks in each operating region." },
     { icon: <IcoChart />,     title: "Transparent FX",           desc: "Mid-market rates refreshed every 30 seconds. Our spread is shown before you confirm — 0.4% on Business plans, no hidden markups." },
@@ -301,7 +301,7 @@ export default function RemitBridge() {
 
   const faqs = [
     { q: "How long does an international transfer take?", a: "On major corridors (US, UK, EU, UAE, Singapore), payments settle in under 30 seconds. Emerging market corridors are typically same-day. We display live estimated settlement times before you confirm any payment." },
-    { q: "What currencies and countries do you support?", a: "We support 65 currencies for account balances and 190+ destination countries. You can hold USD, EUR, GBP, KES, NGN, GHS, ZAR, SGD, INR, JPY, and dozens more simultaneously in a single account." },
+    { q: "What currencies and countries do you support?", a: "We support 65 currencies for account balances and 50+ destination countries. You can hold USD, EUR, GBP, KES, NGN, GHS, ZAR, SGD, INR, JPY, and dozens more simultaneously in a single account." },
     { q: "How are FX rates calculated?", a: "We use mid-market interbank rates refreshed every 30 seconds from a composite of five liquidity providers. Our spread — 0.4% on Business, 0.8% on Starter — is shown before you confirm. No hidden conversion charges, ever." },
     { q: "Is RemitBridge regulated?", a: "Yes. We are licensed as a Money Services Business (MSB) in the US, authorised by the Financial Conduct Authority (FCA) in the UK, and registered with the relevant regulators in all other operating regions. Client funds are held in segregated custodian accounts." },
     { q: "Can I integrate RemitBridge with my existing ERP or accounting software?", a: "Our REST API covers 100% of platform functionality. We provide SDKs for Node.js, Python, PHP, and Go. Pre-built integrations exist for Xero, QuickBooks, NetSuite, SAP, and all major ERPs. Webhooks deliver real-time payment events directly to your systems." },
@@ -510,10 +510,10 @@ export default function RemitBridge() {
                 <strong>your business does</strong>
               </h1>
               <p className="hero-p">
-                RemitBridge gives finance teams one platform to send, receive, hold, and convert money across 190+ countries — with bank-grade compliance, real-time settlement, and fully transparent FX pricing.
+                RemitBridge gives finance teams one platform to send, receive, hold, and convert money across 50+ countries — with bank-grade compliance, real-time settlement, and fully transparent FX pricing.
               </p>
               <div className="hero-btns">
-                <a href="#" className="btn-blue">Open an account <IcoArrow /></a>
+                <a href="/download-app" className="btn-blue">Get the app <IcoArrow /></a>
                 <a href="#" className="btn-outline">See how it works</a>
               </div>
               <div className="hero-trust">
@@ -554,7 +554,7 @@ export default function RemitBridge() {
         <div className="wrap" style={{ padding: 0, maxWidth: "100%" }}>
           <div className="metrics-grid">
             {[
-              { val: 190, suf: "+", label: "Countries & territories" },
+              { val: 50, suf: "+", label: "Countries & territories" },
               { val: 3,   pre: "< ", suf: "s", label: "Average settlement time" },
               { val: 65,  suf: "",  label: "Currencies supported" },
               { val: 14,  pre: "$", suf: "B+", label: "Processed in 2024" },

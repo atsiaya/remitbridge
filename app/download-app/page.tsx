@@ -28,7 +28,7 @@ const IcoCheck  = () => <Ico d="M20 6L9 17l-5-5" size={14} />;
 const IcoStar   = () => <Ico d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" size={14} />;
 
 const appFeatures = [
-  "Send money to 190+ countries in seconds",
+  "Send money to 50+ countries in seconds",
   "Real-time exchange rates — no hidden markups",
   "Multi-currency wallet in your pocket",
   "Instant payment notifications",
@@ -67,11 +67,6 @@ export default function DownloadAppPage() {
                 <span className="dl-h1__accent">in your pocket</span>
               </h1>
 
-              <p className="dl-sub">
-                Send and receive money across 190+ countries, pay with
-                multi-currency wallets, lock FX rates, and track every
-                transaction in real time — all from the RemitBridge app.
-              </p>
 
               {/* Feature checklist */}
               <ul className="dl-features">

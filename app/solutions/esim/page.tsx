@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function ESIM() {
   const stats = [
     {
-      value: "190+",
+      value: "50+",
       label: "Countries Covered",
     },
     {
@@ -150,7 +150,7 @@ export default function ESIM() {
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">
-              Activate mobile data instantly in over 190 countries with digital
+              Activate mobile data instantly in over 50 countries with digital
               eSIM technology. No physical SIM cards, no roaming surprises,
               and no waiting.
             </p>

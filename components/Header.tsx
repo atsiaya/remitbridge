@@ -52,7 +52,7 @@ const IcoArrow = () => <Ico d="M5 12h14M12 5l7 7-7 7" size={14} />;
 const solutionsLinks = [
   {
     title: "Money transfers",
-    desc: "Send internationally to 190+ countries",
+    desc: "Send internationally to 50+ countries",
     href: "/solutions/money-transfers",
   },
   {
@@ -67,7 +67,7 @@ const solutionsLinks = [
   },
   {
     title: "Global eSIM",
-    desc: "Stay connected in 190+ countries instantly",
+    desc: "Stay connected in 50+ countries instantly",
     href: "/solutions/esim",
   },
 ];

@@ -7,7 +7,7 @@ const capabilities = [
   {
     eyebrow: "Payments",
     title: "Money Transfers",
-    desc: "Send money internationally across 190+ countries with transparent pricing, local rails, and near real-time settlement on all major corridors.",
+    desc: "Send money internationally across 50+ countries with transparent pricing, local rails, and near real-time settlement on all major corridors.",
     href: "/solutions/money-transfers",
   },
   {
@@ -25,7 +25,7 @@ const capabilities = [
   {
     eyebrow: "Connectivity",
     title: "Global eSIM",
-    desc: "Instant digital mobile connectivity in 190+ countries. Activate in seconds from your dashboard — no physical SIM or carrier switch required.",
+    desc: "Instant digital mobile connectivity in 50+ countries. Activate in seconds from your dashboard — no physical SIM or carrier switch required.",
     href: "/solutions/esim",
   },
 ];
@@ -78,7 +78,7 @@ const steps = [
   { n: "01", title: "Create your account",    desc: "Sign up in minutes. No branch visit, no paper forms." },
   { n: "02", title: "Verify your business",   desc: "Automated KYB — most businesses approved within the hour." },
   { n: "03", title: "Fund your wallet",       desc: "Deposit via SWIFT, SEPA, ACH, or local bank transfer." },
-  { n: "04", title: "Send globally",          desc: "Pay suppliers, staff, or partners across 190+ countries." },
+  { n: "04", title: "Send globally",          desc: "Pay suppliers, staff, or partners across 50+ countries." },
 ];
 
 const testimonials = [
@@ -175,7 +175,7 @@ export default function Solutions() {
           <div className="rb-wrap">
             <div className="sl-stats-grid">
               {[
-                { val: "190+",   label: "Countries supported"    },
+                { val: "50+",   label: "Countries supported"    },
                 { val: "65",     label: "Currencies held"        },
                 { val: "99.98%", label: "Platform uptime"        },
                 { val: "24/7",   label: "Transaction monitoring" },

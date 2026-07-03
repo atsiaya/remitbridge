@@ -21,7 +21,7 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "RemitBridge — Global Payments Infrastructure",
   description:
-    "Move money across 190+ countries with multi-currency accounts, real-time settlement, and fully transparent FX pricing. Built for modern finance teams.",
+    "Move money across 50+ countries with multi-currency accounts, real-time settlement, and fully transparent FX pricing. Built for modern finance teams.",
   keywords: [
     "cross-border payments",
     "international transfers",

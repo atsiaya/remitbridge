@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 const metrics = [
-  { value: "190+",   label: "Countries served"         },
+  { value: "50+",   label: "Countries served"         },
   { value: "65",     label: "Currencies supported"     },
   { value: "$14.2B", label: "Processed in 2024"        },
   { value: "99.98%", label: "Platform uptime SLA"      },
@@ -19,7 +19,7 @@ const whatWeBuild = [
   {
     eyebrow: "Payments",
     title: "Transfers & Payouts",
-    desc: "Cross-border transfers, supplier payments, bulk payroll, and mass payout infrastructure across 190+ destination countries.",
+    desc: "Cross-border transfers, supplier payments, bulk payroll, and mass payout infrastructure across 50+ destination countries.",
   },
   {
     eyebrow: "Treasury",
@@ -29,7 +29,7 @@ const whatWeBuild = [
   {
     eyebrow: "Connectivity",
     title: "eSIM & Top-Ups",
-    desc: "Instant digital mobile connectivity and airtime recharge across 190+ countries — managed from the same platform as your payments.",
+    desc: "Instant digital mobile connectivity and airtime recharge across 50+ countries — managed from the same platform as your payments.",
   },
 ];
 

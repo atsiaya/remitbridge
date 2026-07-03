@@ -37,7 +37,7 @@ const featuredProducts = [
     title: "International Transfers",
     desc: "Move money globally through optimized local payment rails with transparent pricing, fast settlement, and full tracking from initiation to credit confirmation on every corridor.",
     bullets: [
-      "190+ destination countries supported",
+      "50+ destination countries supported",
       "Sub-3 second settlement on major corridors",
       "End-to-end payment status tracking",
     ],
@@ -61,10 +61,10 @@ const featuredProducts = [
     id: "esim",
     eyebrow: "Connectivity",
     title: "Global eSIM",
-    desc: "Instant digital mobile connectivity across 190+ countries without physical SIM cards. Activate in seconds from your dashboard or via API — ideal for teams managing travel or field operations globally.",
+    desc: "Instant digital mobile connectivity across 50+ countries without physical SIM cards. Activate in seconds from your dashboard or via API — ideal for teams managing travel or field operations globally.",
     bullets: [
       "Instant activation — no SIM swap needed",
-      "190+ countries on a single eSIM profile",
+      "50+ countries on a single eSIM profile",
       "Managed via dashboard or REST API",
     ],
     image:
@@ -94,7 +94,7 @@ const ecosystemProducts = [
   { title: "Bulk Payouts",          desc: "Mass payment distributions to 5,000+ recipients." },
   { title: "FX Exchange",           desc: "Real-time currency conversions at mid-market." },
   { title: "Treasury Tools",        desc: "Liquidity management and FX exposure controls." },
-  { title: "Global eSIM",           desc: "Digital connectivity in 190+ countries."     },
+  { title: "Global eSIM",           desc: "Digital connectivity in 50+ countries."     },
   { title: "Mobile Top-Ups",        desc: "Airtime and data recharge for 500+ operators." },
   { title: "Developer APIs",        desc: "Embed accounts, payments, cards, and FX."    },
   { title: "Compliance Suite",      desc: "KYC, AML screening, and regulatory reporting." },
@@ -180,7 +180,7 @@ export default function Products() {
           <div className="rb-wrap">
             <div className="prod-stats-grid">
               {[
-                { val: "190+",  label: "Countries supported"    },
+                { val: "50+",  label: "Countries supported"    },
                 { val: "65",    label: "Currencies held"        },
                 { val: "< 3s",  label: "Settlement on majors"   },
                 { val: "99.98%",label: "Platform uptime"        },
