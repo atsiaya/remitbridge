@@ -307,7 +307,10 @@ const GLOBAL_STYLES = `
     padding: 7px 0;
     border-bottom: 1px solid var(--rb-blue-800);
     position: relative;
-    z-index: 300;
+    z-index: 10;
+  }
+  @media (max-width: 768px) {
+    .rb-ticker { display: none; }
   }
   .rb-ticker__track {
     display: flex;
