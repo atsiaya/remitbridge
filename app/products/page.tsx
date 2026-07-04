@@ -164,8 +164,8 @@ export default function Products() {
               </p>
 
               <div className="prod-hero__actions">
-                <a href="/register" className="btn-blue">
-                  Open an account <IcoArrow />
+                <a href="/download-app" className="btn-blue">
+                  Get the app <IcoArrow />
                 </a>
                 <a href="/developers" className="btn-outline">
                   View API docs

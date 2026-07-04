@@ -32,7 +32,7 @@ const IcoShield = () => <Ico d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" siz
 
 // ─── QUICK LINKS ─────────────────────────────────────────────────────────────
 const quickLinks = [
-  { label: "Open an account",      href: "/register",    desc: "Start sending money globally today" },
+  { label: "Get the app",      href: "/download-app",    desc: "Start sending money globally today" },
   { label: "Explore products",     href: "/products",    desc: "Accounts, cards, FX, payouts & more" },
   { label: "Read the docs",        href: "/developers",  desc: "API reference and integration guides"  },
   { label: "Talk to sales",        href: "/contact",     desc: "Get a tailored solution for your team"  },
