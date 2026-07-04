@@ -137,13 +137,14 @@ export default function RootLayout({
                   <li className="rb-footer__contact-item">
                     <span className="rb-footer__contact-label">Phone</span>
                     <a href="tel:+15552038841" className="rb-footer__link">
-                      +1 (555) 203-8841
+                      +1(555)203-8841
+                      +254721901999
                     </a>
                   </li>
                   <li className="rb-footer__contact-item">
                     <span className="rb-footer__contact-label">HQ</span>
                     <span className="rb-footer__contact-value">
-                      New York, USA · London, UK
+                       Nairobi Kenya · Ontario, Canada · London, UK · Lagos, Nigeria · Kampala, Uganda 
                     </span>
                   </li>
                 </ul>

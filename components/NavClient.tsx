@@ -162,7 +162,7 @@ export default function NavClient() {
 
           {/* Desktop CTAs */}
           <div className="nav__actions">
-            <Link href="/"    className="nav__signin">Sign in</Link>
+            <Link href="/"    className="nav__signin"> </Link>
             <Link href="/download-app" className="nav__cta">Get the app →</Link>
           </div>
 
@@ -261,7 +261,8 @@ export default function NavClient() {
           {/* Drawer CTAs */}
           <div className="nav-drawer__actions">
             <Link href="/"    className="nav-drawer__btn nav-drawer__btn--outline" onClick={closeMobile}>
-              Sign in
+             
+
             </Link>
             <Link href="/download-app" className="nav-drawer__btn nav-drawer__btn--solid"   onClick={closeMobile}>
               Get the app →
