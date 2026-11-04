@@ -1,24 +1,101 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #0f172a; /* slate-900 */
+/* ── Design tokens ─────────────────────────────────────────────────────────
+   One light theme. Ink and paper do most of the work; "sun" is the single
+   accent and is used sparingly (logo arc, toast, focus-worthy moments).      */
+@theme {
+  --color-paper: #ffffff;
+  --color-mist: #f6f5f1;
+  --color-ink: #121212;
+  --color-muted: #66665f;
+  --color-line: #e7e5de;
+  --color-sun: #ffb400;
+  --color-sun-soft: #fff1cc;
+  --color-leaf: #0d7a54;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #020617; /* slate-950 */
-    --foreground: #e5e7eb;
-  }
+@theme inline {
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist), system-ui, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Smooth but professional motion */
-* {
-  scroll-behavior: smooth;
+::selection {
+  background: var(--color-sun);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── Motion ────────────────────────────────────────────────────────────────
+   One orchestrated entrance on page load (headline → copy → buttons → visual)
+   and one toast in the hero. Nothing animates on scroll.                    */
+@keyframes rb-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rb-toast {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rb-rise {
+  animation: rb-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.rb-delay-1 {
+  animation-delay: 0.12s;
+}
+.rb-delay-2 {
+  animation-delay: 0.24s;
+}
+.rb-delay-3 {
+  animation-delay: 0.36s;
+}
+
+.rb-toast {
+  animation: rb-toast 0.6s 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rb-rise,
+  .rb-toast {
+    animation: none;
+  }
 }
