@@ -142,7 +142,7 @@ export default async function HomePage() {
           </p>
           <div className="rb-rise rb-delay-2 mt-9 flex flex-wrap justify-center gap-3">
             <ButtonLink href="/get-started" size="lg">
-              Join the waitlist
+              Download
             </ButtonLink>
             <ButtonLink href="#how-it-works" variant="secondary" size="lg">
               How it works
