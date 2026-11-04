@@ -38,9 +38,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ButtonLink href="/get-started" className="hidden sm:inline-flex">
-            Join the waitlist
-          </ButtonLink>
+      
           <button
             type="button"
             className="inline-flex size-10 items-center justify-center rounded-full text-ink transition-colors hover:bg-mist md:hidden"
