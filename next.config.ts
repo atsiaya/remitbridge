@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
       { source: "/solutions/esim", destination: "/", permanent: true },
       { source: "/developers", destination: "/", permanent: true },
       { source: "/blog", destination: "/", permanent: true },
-      { source: "/download-app", destination: "/get-started", permanent: true },
+      { source: "/download-app", destination: "/app", permanent: true },
       { source: "/register", destination: "/get-started", permanent: true },
     ];
   },
