@@ -8,6 +8,8 @@ export const site = {
   description:
     "Hold USD in a wallet, send money across borders, and pay online with virtual cards. One account, with fees shown before you confirm.",
   email: "support@remitbridge.com",
+  /** AppsFlyer OneLink: sends iPhone users to the App Store and Android users to Google Play. */
+  appDownloadUrl: "https://onelink.to/z2cnq7",
   phone: "+254721901999",
   phoneDisplay: "+254 721 901 999",
   /**
