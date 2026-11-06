@@ -9,6 +9,7 @@ const routes = [
   "/pricing",
   "/company",
   "/get-started",
+  "/download",
   "/terms-of-service",
   "/privacy-policy",
 ];
